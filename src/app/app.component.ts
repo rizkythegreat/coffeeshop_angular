@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { AboutComponent } from './components/about/about.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ import { MenuComponent } from './components/menu/menu.component';
     HeaderComponent,
     HeroComponent,
     AboutComponent,
-    MenuComponent
+    MenuComponent,
+    GalleryComponent
   ],
   template: `
     <div class="app-container">
@@ -22,6 +24,7 @@ import { MenuComponent } from './components/menu/menu.component';
         <app-hero></app-hero>
         <app-about></app-about>
         <app-menu></app-menu>
+        <app-gallery></app-gallery>
       </main>
     </div>
   `,
