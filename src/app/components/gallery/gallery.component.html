@@ -1,0 +1,33 @@
+<section id="gallery" class="gallery">
+    <div class="container">
+        <div class="section-title">
+            <h2>Coffee Moments</h2>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item" *ngFor="let item of galleryItems; let i = index" (click)="openLightbox(i)">
+                <div class="gallery-image">
+                    <img [src]="item.image" [alt]="item.title">
+                </div>
+                <div class="gallery-overlay">
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.description }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lightbox" *ngIf="lightboxOpen">
+            <div class="lightbox-content">
+                <button class="close-btn" (click)="closeLightbox()">×</button>
+                <button class="nav-btn prev-btn" (click)="prevImage()" *ngIf="currentIndex > 0">❮</button>
+                <button class="nav-btn next-btn" (click)="nextImage()"
+                    *ngIf="currentIndex < galleryItems.length - 1">❯</button>
+                <img [src]="galleryItems[currentIndex].image" [alt]="galleryItems[currentIndex].title">
+                <div class="lightbox-caption">
+                    <h3>{{ galleryItems[currentIndex].title }}</h3>
+                    <p>{{ galleryItems[currentIndex].description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
