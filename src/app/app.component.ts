@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { AboutComponent } from './components/about/about.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ import { AboutComponent } from './components/about/about.component';
     CommonModule,
     HeaderComponent,
     HeroComponent,
-    AboutComponent
+    AboutComponent,
+    MenuComponent
   ],
   template: `
     <div class="app-container">
@@ -19,6 +21,7 @@ import { AboutComponent } from './components/about/about.component';
       <main>
         <app-hero></app-hero>
         <app-about></app-about>
+        <app-menu></app-menu>
       </main>
     </div>
   `,
