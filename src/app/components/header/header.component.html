@@ -1,0 +1,22 @@
+<header [class.scrolled]="scrolled">
+    <div class="container header-container">
+        <div class="logo">
+            <h1>Brew & Bygone</h1>
+            <div class="subtitle">Est. 1952</div>
+        </div>
+        <nav>
+            <button class="mobile-menu-btn" (click)="toggleMenu()" [class.open]="menuOpen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" [class.open]="menuOpen">
+                <li><a href="#home" (click)="closeMenu()">Home</a></li>
+                <li><a href="#about" (click)="closeMenu()">About</a></li>
+                <li><a href="#menu" (click)="closeMenu()">Menu</a></li>
+                <li><a href="#gallery" (click)="closeMenu()">Gallery</a></li>
+                <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
