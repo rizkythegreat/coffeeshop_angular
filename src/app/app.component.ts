@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
+import { AboutComponent } from './components/about/about.component';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +10,15 @@ import { HeroComponent } from './components/hero/hero.component';
   imports: [
     CommonModule,
     HeaderComponent,
-    HeroComponent
+    HeroComponent,
+    AboutComponent
   ],
   template: `
     <div class="app-container">
       <app-header></app-header>
       <main>
         <app-hero></app-hero>
+        <app-about></app-about>
       </main>
     </div>
   `,
