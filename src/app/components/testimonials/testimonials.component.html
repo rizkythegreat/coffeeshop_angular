@@ -1,0 +1,41 @@
+<section id="testimonials" class="testimonials">
+    <div class="container">
+        <div class="section-title">
+            <h2>What Our Customers Say</h2>
+        </div>
+
+        <div class="testimonial-container">
+            <div class="testimonial-slider-wrapper">
+                <div class="testimonial-slider" [style.transform]="'translateX(' + slidePosition + 'px)'">
+                    <div class="testimonial-card" *ngFor="let testimonial of testimonials">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">"</div>
+                            <p class="quote">{{ testimonial.quote }}</p>
+                            <div class="rating">
+                                <span *ngFor="let star of [1, 2, 3, 4, 5]">
+                                    <span class="star" [class.filled]="star <= testimonial.rating">★</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img [src]="testimonial.image" [alt]="testimonial.name">
+                            </div>
+                            <div class="author-info">
+                                <h4>{{ testimonial.name }}</h4>
+                                <p>{{ testimonial.occupation }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="nav-btn prev-btn" (click)="prevTestimonial()">❮</button>
+            <button class="nav-btn next-btn" (click)="nextTestimonial()">❯</button>
+        </div>
+
+        <div class="testimonial-dots">
+            <span *ngFor="let testimonial of testimonials; let i = index" class="dot"
+                [class.active]="i === currentIndex" (click)="goToTestimonial(i)"></span>
+        </div>
+    </div>
+</section>
