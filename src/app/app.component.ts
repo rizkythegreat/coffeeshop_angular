@@ -6,6 +6,7 @@ import { AboutComponent } from './components/about/about.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
     AboutComponent,
     MenuComponent,
     GalleryComponent,
-    TestimonialsComponent
+    TestimonialsComponent,
+    ContactComponent
   ],
   template: `
     <div class="app-container">
@@ -28,6 +30,7 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
         <app-menu></app-menu>
         <app-gallery></app-gallery>
         <app-testimonials></app-testimonials>
+        <app-contact></app-contact>
       </main>
     </div>
   `,
