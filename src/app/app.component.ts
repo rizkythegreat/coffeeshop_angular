@@ -7,6 +7,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ import { ContactComponent } from './components/contact/contact.component';
     MenuComponent,
     GalleryComponent,
     TestimonialsComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent
   ],
   template: `
     <div class="app-container">
@@ -32,6 +34,7 @@ import { ContactComponent } from './components/contact/contact.component';
         <app-testimonials></app-testimonials>
         <app-contact></app-contact>
       </main>
+      <app-footer></app-footer>
     </div>
   `,
   styles: [`
