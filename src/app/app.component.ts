@@ -5,6 +5,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { AboutComponent } from './components/about/about.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     HeroComponent,
     AboutComponent,
     MenuComponent,
-    GalleryComponent
+    GalleryComponent,
+    TestimonialsComponent
   ],
   template: `
     <div class="app-container">
@@ -25,6 +27,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
         <app-about></app-about>
         <app-menu></app-menu>
         <app-gallery></app-gallery>
+        <app-testimonials></app-testimonials>
       </main>
     </div>
   `,

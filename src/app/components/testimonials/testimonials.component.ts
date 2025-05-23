@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
 interface Testimonial {
@@ -15,9 +15,9 @@ interface Testimonial {
   standalone: true,
   imports: [CommonModule],
   templateUrl: "./testimonials.component.html",
-  styleUrls: ["./testimonials.component.scss"]
+  styleUrls: ["./testimonials.component.css"]
 })
-export class TestimonialsComponent {
+export class TestimonialsComponent implements OnInit {
   testimonials: Testimonial[] = [
     {
       id: 1,
